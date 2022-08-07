@@ -5,16 +5,17 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import { Toolbar } from '../components/toolbar'
 
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
   return (
     <>
+    <Toolbar />
       <Layout preview={preview}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Blog With w00k</title>
         </Head>
         <Container>
           <Intro />
